@@ -1,0 +1,354 @@
+\section{Librintro}
+\subsection{Définition(s)}
+
+\begin{frame}{Libre, d'accord, mais de quoi ?}
+  \framesubtitle{Définition de la Free Software Foundation\footnotemark[1]}
+
+  \begin{description}[<+->]
+    \item[liberté 0] \small \textbf{d'utiliser} le programme comme vous voulez, pour n'importe quel usage ;
+    \item[liberté 1] \small \alert<5>{\textbf{d'étudier} le fonctionnement du programme, et de le modifier pour qu'il effectue vos tâches informatiques comme vous le souhaitez\footnotemark[2] ;}
+    \item[liberté 2] \small \textbf{de redistribuer} des copies, donc d'aider votre voisin ;
+    \item[liberté 3] \small \alert<5>{\textbf{de distribuer} aux autres des copies de vos versions modifiées ; en faisant cela, vous donnez à toute la communauté une possibilité de profiter de vos changements\footnotemark[2].}
+  \end{description}
+
+  \footnotetext[1]{\tiny\url{http://www.gnu.org/philosophy/free-sw.fr.html}}
+  \footnotetext[2]{\tiny \alert<5>{l'accès au code source est une condition nécessaire}}
+  
+  %
+  % C'est quoi le code source ?
+  %
+\end{frame}
+
+\begin{frame}{Libre, d'accord, mais de quoi ?}
+  \framesubtitle{"Social Contract" de Debian\footnotemark[1]}
+
+  \begin{itemize}\small
+    \item Libre redistribution ;
+    \item Code source ;
+    \item Travaux dérivés ;
+    \item Intégrité du code source de l'auteur ;
+    \item Pas de discrimination envers des personnes ou groupes ;
+    \item Pas de discrimination envers des domaines ou des entreprises ;
+    \item Distribution de la licence ;
+    \item La licence ne doit pas être spécifique à Debian ;
+    \item La licence ne doit pas contaminer les autres programmes.
+  \end{itemize}
+
+  \footnotetext[1]{\tiny\url{https://lists.debian.org/debian-announce/1997/msg00017.html}}
+\end{frame}
+
+\begin{frame}{Libre comme une bière, ou comme un discours ?}
+  \begin{quote}\centering
+    ''Think free as in free speech, not free beer''
+  \end{quote}
+  \begin{flushright}
+    Richard Stallman
+  \end{flushright}
+
+  \begin{alertblock}<2->{}\centering
+    Libre $\neq$ Gratuit
+  \end{alertblock}
+\end{frame}
+
+\subsection{Culture Libre}
+
+\begin{frame}{Philosophie}
+  \begin{flushright}
+    \begin{minipage}{.85\textwidth}
+      \begin{quote}\footnotesize
+        \og Ce serait peut-être l'une des plus grandes opportunités manquées de notre époque si le logiciel libre ne libérait rien d'autre que du code. \fg{}
+      \end{quote}
+    \end{minipage}
+  \end{flushright}
+  
+  \begin{itemize}
+    \item Culture du partage ;
+    \item Rompre le schéma du consommateur ;
+    \item Faire ensemble.
+  \end{itemize}
+  
+  % Mouvement du logiciel libre
+  % 2004 UNESCO élève le logiciel libre au rang de patrimoine mondial
+\end{frame}
+
+\begin{frame}\centering
+  En 2004, l'UNESCO élèva le logiciel libre au rang de patrimoine mondial de l'humanité.
+\end{frame}
+
+\begin{frame}{Pas que le logiciel !}
+  \begin{itemize}
+    \item Matériels (open-hardware) ;
+    \item Livres ;
+    \item Musique ;
+    \item Films ;
+    \item Données ;
+    \item \dots
+  \end{itemize}
+\end{frame}
+
+\subsection{Pourquoi le Libre ?}
+
+\begin{frame}
+  \begin{itemize}
+    \item Éthique ;
+    \item Interopérabilité (utilisation de formats ouverts) ;
+    \item Qualité, fiabilité, sécurité ;
+    \item Liberté, égalité, fraternité ;
+    \item Pérénnité ;
+    \item Adaptabilité.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Interopérabilité}
+  \begin{quote}\small
+    On entend par compatibilité la capacité de deux systèmes à communiquer sans ambiguïté.
+  \end{quote}
+  \begin{quote}\small
+    On entend par interopérabilité la capacité à rendre compatibles deux systèmes quelconques. L'interopérabilité nécessite que les informations nécessaires à sa mise en œuvre soient disponibles sous la forme de \textbf{standards ouverts}.
+  \end{quote}
+  \begin{flushright}
+    Amendement (rejeté) à la loi DADVSI
+  \end{flushright}
+\end{frame}
+
+\begin{frame}{Qualité, fiabilité, sécurité}
+  \begin{itemize}
+    \item Revue par les pairs ;
+    \item Processus ouvert ;
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Adaptabilité}
+  Possibilité d'adapter un programme pour des besoins spécifiques (liberté 1).
+\end{frame}
+
+\section{Gardiens Protecteurs du Libre}
+
+\subsection{Copyleft}
+
+\begin{frame}{Une notion qui divise : le \textcopyleft{}opyleft}
+  Offre les libertés du Libre pour la diffusion d'un logiciel en imposant que les travaux dérivés soient diffusés sous les mêmes conditions.
+\end{frame}
+
+\subsection{Licences}
+
+\begin{frame}{La GNU \textbf{G}eneral \textbf{P}ublic \textbf{L}icence}
+  \framesubtitle{Historique}
+  \tikz[overlay, remember picture]
+    \node[anchor=south west] at ($(current page.south west)+(0, 3mm)$) {\pgfuseimage{gpl}};
+    
+  \begin{description}
+    \item[1989] Version 1 écrite par Richard Stallman ;
+    \item[1991] Version 2, apparition de la LGPL ;
+    \item[2007] Version 3, l'actuelle.
+  \end{description}
+\end{frame}
+
+\begin{frame}{La GNU \textbf{G}eneral \textbf{P}ublic \textbf{L}icence}
+  \framesubtitle{La fratrie}
+  
+  \begin{description}
+    \item[LGPL] \emph{GNU Lesser General Public Licence} ;
+    \item[GFDL] \emph{GNU Free Documentation Licence} ;
+    \item[AGPL] \emph{GNU Affero General Public Licence}.
+  \end{description}
+\end{frame}
+  
+\begin{frame}{La licence BSD\footnote{Berkeley Software Distribution License}}
+  \begin{itemize}
+    \item Pas de copyleft ;
+    \item Proche de la notion de Domaine Public ;
+    \item Utilisable dans des logiciels propriétaires ;
+    \item Compatibilité à sens unique avec la GPL.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Made in France, la famille CeCILL\footnote{\textbf{CE}A \textbf{C}NRS \textbf{I}NRIA \textbf{L}ogiciel \textbf{L}ibre}}
+  \begin{itemize}
+    \item Version 1 en 2004 ;
+    \item Version 2.1 actuelle en 2013 ;
+    \item Garantir le respect du droit français, et du logiciel libre ;
+    \item Trois licences :
+    \begin{description}
+      \item[CeCILL-A] Compatible avec la GPL ;
+      \item[CeCILL-B] Compatible avec la BSD ;
+      \item[CeCILL-C] Compatible avec la LGPL.
+    \end{description}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Et d'autres\dots}
+  \begin{itemize}
+    \item Licence Apache (non-copyleft) ;
+    \item Eclipse Public Licence (copyleft).
+  \end{itemize}
+\end{frame}
+
+\subsection{Données}
+
+\begin{frame}{Creative Commons}
+  \begin{itemize}
+    \item Licences sur du contenu.
+  \end{itemize}
+  
+  \begin{block}{Une licence modulable}
+    \begin{description}
+      \item[BY] Attribution ;
+      \item[SA] Partage des conditions initiales à l'identique ;
+      \item[ND] Pas de modifications ;
+      \item[NC] Pas d'utilisation commerciale
+    \end{description}
+  \end{block}
+  
+  \begin{center}
+    \begin{tikzpicture}
+      \matrix[ampersand replacement=\&] {
+        \node {\pgfuseimage{ccze}} ; \&
+        \node {\pgfuseimage{ccby}} ; \&
+        \node {\pgfuseimage{ccnc}} ; \&
+        \node {\pgfuseimage{ccnd}} ; \&
+        \node {\pgfuseimage{ccsa}} ; \\
+      };
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Creative Commons}
+  Sept licences :
+  \begin{itemize}
+    \item CC-ZERO
+    \item CC-BY
+    \item CC-BY-SA
+    \item CC-BY-ND
+    \item CC-BY-NC
+    \item CC-BY-NC-SA
+    \item CC-BY-NC-ND
+  \end{itemize}
+\end{frame}
+
+\section{Système d'exploitation libre}
+
+\subsection{La génèse}
+
+\begin{frame}{UNIX}
+  \begin{description}
+    \item[1969] Ken Thompson développe la première version pour AT\&T\footnote{Laboratoires Bell} ;
+    \item[1971] Dennis Ritchie crée le langage C ;
+    \item[1977] Bill Joy réalise la première \emph{Berkeley Software Distribution} ;
+    \item[1989] Première BSD libre, qui s'affranchit de AT\&T.
+  \end{description}
+\end{frame}
+
+\begin{frame}{GNU, GNU Not Unix}
+  \tikz[overlay, remember picture]
+    \node[anchor=south west] at ($(current page.south west)+(0, 3mm)$) {\pgfuseimage{gnu}};
+    
+  \begin{description}
+    \item[1983] Lancement, par Richard Stallman, du projet d'un système d'exploitation compatible UNIX ;
+    \item[1985] Création de la Free Software Foundation ;
+  \end{description}
+\end{frame}
+
+\subsection{Linux}
+
+\begin{frame}{Le noyau Linux}
+  \begin{itemize}
+    \item Conçu en 1991 par Linus Torvald ;
+    \item Inspiré de UNIX ;
+    \item Développé en C ;
+    \item Libre.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Quelques chiffres}
+  \begin{itemize}
+    \item 15 803 499 lignes de code (version 3.10) ;
+    \item Estimation de 5000 à 6000 développeurs ;
+    \item Redévelopper le noyau de manière propriétaire couterait aux alentours de 882M€.
+  \end{itemize}
+\end{frame}
+
+\subsection{GNU/Linux}
+
+\begin{frame}{Le système d'exploitation GNU/Linux}
+  \begin{itemize}
+    \item Système d'Exploitation Libre ;
+    \item Système GNU prévu pour fonctionner avec \texttt{Hurd} ;
+    \item GNU/Linux : Système GNU fonctionnant avec Linux.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{D'autres systèmes d'exploitation libres}
+  \begin{itemize}
+    \item BSD ;
+    \item GNU/BSD (kFreeBSD, NetBSD);
+    \item GNU/Hurd ;
+    \item Ubuntu Touch ;
+    \item Firefox OS.
+  \end{itemize}
+\end{frame}
+
+\section{Logiciels}
+
+\subsection{Quelques acteurs du libre}
+
+\begin{frame}{Free Software Foundation}
+  % GNU
+  % LibreOffice
+\end{frame}
+
+\begin{frame}{Framasoft}
+  \tikz[overlay, remember picture]
+    \node[anchor=south west] at ($(current page.south west)+(0, 2mm)$) {\pgfuseimage{framasoft}};
+    
+  {\small Réseau promouvant, diffusant, et développant des logiciels libres.}
+  
+  \begin{block}{Services libres \texttt{frama*} en ligne}\centering
+    pad, date, calc, sphère, et bien d'autres.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Mozilla}
+  
+\end{frame}
+
+\begin{frame}{Et bien d'autres\dots}
+  
+\end{frame}
+
+\let\origaddtocontents=\addtocontents
+\def\dontaddtocontents#1#2{}
+
+\let\addtocontents=\dontaddtocontents
+\section*{Invisible Section}
+\let\addtocontents=\origaddtocontents
+
+\defbeamertemplate{background canvas}{ccimap}[0]{
+  \tikz[overlay, remember picture]
+    \node[anchor=south west, inner sep=0pt] at (current page.south west) {\pgfuseimage{map}};
+}
+
+\setbeamertemplate{background canvas}[ccimap]
+
+\begin{frame}{Pour aller plus loin\dots}
+  \framesubtitle{InstallParty !}
+  \begin{center}
+    \tikz
+      \node[fill=white, fill opacity=0.75, align=center] {Organisée par l'association \textsc{GoéLUG}\\au Container (en bas de la CCI), ce soir à 18h30.};
+  \end{center}
+\end{frame}
+
+\setbeamertemplate{background canvas}[default]
+
+\begin{frame}{Pour aller plus loin\dots}
+  \framesubtitle{Discussion / Manipulation}
+\end{frame}
+
+\begin{frame}{Sources}\small
+  \begin{itemize}
+    \item \emph{La philosophie du logiciel libre}, par Jean-François \textsc{Becquet} ;
+    \item \emph{Qu'est ce que le logiciel libre et pourquoi faire ?}, par Dave Null ;
+    \item \textsc{Wikipedia} ;
+    \item \emph{Free Culture}, Lawrence Lessig ;
+  \end{itemize}
+\end{frame}

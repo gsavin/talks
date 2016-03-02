@@ -1,0 +1,67 @@
+\documentclass[12pt]{beamer}
+\usepackage{xltxtra}
+
+\defaultfontfeatures{Mapping=tex-text;}
+
+\setromanfont[Path=fonts/,
+Scale=MatchLowercase,
+UprightFont = *_Rah,
+BoldFont = *_RBah,
+ItalicFont = *_RIah,
+BoldItalicFont = *_RBah
+]{LinBiolinum}
+
+\setsansfont[Path=fonts/,
+Scale=MatchLowercase,
+UprightFont = *_Rah,
+BoldFont = *_RBah,
+ItalicFont = *_RIah,
+BoldItalicFont = *_RBIah
+]{LinLibertine}
+
+\usepackage[francais]{babel}
+\usepackage{multicol}
+\usetheme{Copenhagen}
+\setbeamercovered{transparent}
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\AtBeginSection[] % Do nothing for \section*
+{
+  \begin{frame}<beamer>
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}\insertsectionhead\par%
+    \end{beamercolorbox}
+    \vfill
+    \tableofcontents[currentsection, sectionstyle=show/hide, hideothersubsections]
+  \end{frame}
+}
+
+\usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\input{images}
+\input{metadata}
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+  
+\begin{frame}
+  \tikz[overlay, remember picture]
+    \node[anchor=south west, inner sep=7mm] at (current page.south) {\pgfuseimage{meditate}} ;
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
+\end{frame}
+  
+\input{frames}
+
+\end{document}
