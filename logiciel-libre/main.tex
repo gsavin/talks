@@ -48,12 +48,25 @@ BoldItalicFont = *_RBIah
 
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 
+\newcommand{\bgimageon}[1]{
+  \setbeamertemplate{background canvas}{
+    \tikz[overlay, remember picture]
+      \node[anchor=south, inner sep=0pt] at ($(current page.south)+(0,3mm)$) {\pgfuseimage{#1}};
+  }
+}
+
+\newcommand{\bgimageoff}{\setbeamertemplate{background canvas}[default]}
+
 \begin{document}
   
 \begin{frame}
-  \tikz[overlay, remember picture]
-    \node[anchor=south west, inner sep=7mm] at (current page.south) {\pgfuseimage{meditate}} ;
+  \begin{tikzpicture}[overlay, remember picture]
+    \node[anchor=south west] at ($(current page.south west)+(0,5mm)$) {\pgfuseimage{abc}};
+    \node[anchor=south west] at ($(current page.south west)+(12mm,5mm)$) {\pgfuseimage{bu}};
+  \end{tikzpicture}
   \titlepage
+  \tikz[overlay, remember picture]
+    \node[anchor=south west, inner sep=7mm] at (current page.south) {\pgfuseimage{meditate}};
 \end{frame}
 
 \begin{frame}

@@ -1,3 +1,25 @@
+\bgimageon{geekpenguin}
+
+\begin{frame}[t]{Une présentation libre\dots}
+  Durant cette présentation, vous êtes libre :
+  \begin{itemize}
+    \item d'intervenir pour y apporter votre contribution ;
+    \item de ne pas adhérer à l'esprit du libre ;
+    \item mais aussi d'y adhérer !
+  \end{itemize}
+\end{frame}
+
+\bgimageon{map}
+
+\begin{frame}{Pour aller plus loin\dots}
+  \begin{center}
+    \tikz
+      \node[fill=white, fill opacity=0.75, align=center] {InstallParty organisée par l'association \textsc{GoéLUG}\\au Container (en bas de la CCI), ce soir à 18h30.};
+  \end{center}
+\end{frame}
+
+\bgimageoff
+
 \section{Librintro}
 \subsection{Définition(s)}
 
@@ -39,7 +61,7 @@
 
 \begin{frame}{Libre comme une bière, ou comme un discours ?}
   \begin{quote}\centering
-    ''Think free as in free speech, not free beer''
+    ``Think free as in free speech, not free beer''
   \end{quote}
   \begin{flushright}
     Richard Stallman
@@ -116,10 +138,33 @@
     \item Revue par les pairs ;
     \item Processus ouvert ;
   \end{itemize}
+  
 \end{frame}
 
 \begin{frame}{Adaptabilité}
   Possibilité d'adapter un programme pour des besoins spécifiques (liberté 1).
+\end{frame}
+
+\begin{frame}{Dans la vie quotidienne}
+  \begin{itemize}
+    \item Android (plus ou moins) ;
+    \item > 80\%\footnote{\tiny\url{http://w3techs.com/technologies/overview/web_server/all}} des serveurs web sont libres (Apache, Nginx, Lighttpd\dots).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Modèles économiques\footnote{\tiny\url{https://aful.org/professionnels/modeles-economiques-logiciels-libres/differents-modeles}}}
+  \begin{itemize}
+    \item Services :
+    \begin{itemize}
+      \item Documentation ;
+      \item Prestations ;
+      \item Support ;
+      \item Certifications ;
+    \end{itemize}
+    \item Mutualisation ;
+    \item Valeurs ajoutées ;
+    \item Mécénat.
+  \end{itemize}
 \end{frame}
 
 \section{Gardiens Protecteurs du Libre}
@@ -278,6 +323,65 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{De (très) nombreuses distributions}
+  \begin{columns}
+    \begin{column}[t]{.5\textwidth}
+      Les majeures :
+      \begin{itemize}
+        \item Debian ;
+        \item Arch Linux ;
+        \item Red Hat ;
+        \item SUSE ;
+        \item Gentoo ;
+        \item Slackware.
+      \end{itemize}
+    \end{column}
+    \begin{column}[t]{.5\textwidth}
+      Et bien d'autres :
+      \begin{itemize}
+        \item Ubuntu ;
+        \item Manjaro ;
+        \item Linux Mint ;
+        \item Fedora ;
+        \item \dots
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Différents environnements de bureau}
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item GNOME ;
+      \item KDE ;
+      \item Unity ;
+      \item MATE ;
+      \item Cinnamon ;
+      \item Xfce ;
+      \item LXDE ;
+      \item Enlightenment.
+    \end{itemize}
+  \end{multicols}
+\end{frame}
+
+\begin{frame}{Différents environnements de bureau}
+  \framesubtitle<1>{GNOME}
+  \framesubtitle<2>{Enlightenment E17}
+  \framesubtitle<3>{KDE}
+      
+  \begin{tikzpicture}[overlay, remember picture]
+    \only<1>{
+        \node[anchor=south] at ($(current page.south)+(0,6mm)$) {\pgfuseimage{gnome}};
+    }
+    \only<2>{
+        \node[anchor=south] at ($(current page.south)+(0,6mm)$) {\pgfuseimage{e17}};
+    }
+    \only<3>{
+        \node[anchor=south] at ($(current page.south)+(0,6mm)$) {\pgfuseimage{kde}};
+    }
+  \end{tikzpicture}
+\end{frame}
+
 \begin{frame}{D'autres systèmes d'exploitation libres}
   \begin{itemize}
     \item BSD ;
@@ -290,30 +394,78 @@
 
 \section{Logiciels}
 
+\subsection{Logiciels courants}
+
+\begin{frame}{Quelques exemples\dots}
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item LibreOffice ;
+      \item GIMP ;
+      \item Inkscape ;
+      \item Firefox ;
+      \item VLC ;
+      \item Apache ;
+      \item Emacs ;
+      \item Eclipse ;
+      \item GPG ;
+      \item Blender ;
+      \item mplayer ;
+      \item GnuCash ;
+      \item \dots
+    \end{itemize}
+  \end{multicols}
+\end{frame}
+
 \subsection{Quelques acteurs du libre}
 
 \begin{frame}{Free Software Foundation}
+  \tikz[overlay, remember picture]
+    \node[anchor=center, opacity=0.25] at ($(current page)+(0, -5mm)$) {\pgfuseimage{fsf}};
   % GNU
   % LibreOffice
+  \begin{itemize}
+    \item ONG créée en 1985 ;
+    \item Promotion du logiciel libre et défense des utilisateurs ;
+    \item Financement du projet GNU.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Framasoft}
   \tikz[overlay, remember picture]
-    \node[anchor=south west] at ($(current page.south west)+(0, 2mm)$) {\pgfuseimage{framasoft}};
-    
-  {\small Réseau promouvant, diffusant, et développant des logiciels libres.}
+    \node[anchor=center, opacity=0.25] at ($(current page)+(0, -6mm)$) {\pgfuseimage{framasoft}};
   
-  \begin{block}{Services libres \texttt{frama*} en ligne}\centering
-    pad, date, calc, sphère, et bien d'autres.
-  \end{block}
+  \begin{itemize}
+    \item Réseau français fondé en 2001 ;
+    \item Soutenu depuis 2004 par l'association du même nom ;
+    \item Promotion, diffusion, et développement de logiciels libres ;
+    \item Culture Libre ;
+    \item Services libres \texttt{frama*} en ligne : \texttt{-pad}, \texttt{-date}, \texttt{-calc}, \texttt{-sphère}, et bien d'autres.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Mozilla}
+  \tikz[overlay, remember picture]
+    \node[anchor=center, opacity=0.25] at ($(current page)+(0, -5mm)$) {\pgfuseimage{mozilla}};
   
+  \begin{itemize}
+    \item Projet fondé en 1998 par Netscape ;
+    \item Soutenu depuis par la Fondation Mozilla ;
+    \item Navigateur Firefox  ;
+    \item Messagerie Thunderbird ;
+    \item Mozilla Developer Network ;
+    \item Firefox OS.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Et bien d'autres\dots}
-  
+  \begin{itemize}
+    \item April ;
+    \item Open Source Initiative ;
+    \item Fondation Linux ;
+    \item Canonical (Ubuntu);
+    \item The Document Foundation (LibreOffice) ;
+    \item \dots
+  \end{itemize}
 \end{frame}
 
 \let\origaddtocontents=\addtocontents
@@ -323,32 +475,32 @@
 \section*{Invisible Section}
 \let\addtocontents=\origaddtocontents
 
-\defbeamertemplate{background canvas}{ccimap}[0]{
-  \tikz[overlay, remember picture]
-    \node[anchor=south west, inner sep=0pt] at (current page.south west) {\pgfuseimage{map}};
-}
-
-\setbeamertemplate{background canvas}[ccimap]
+\bgimageon{tux}
 
 \begin{frame}{Pour aller plus loin\dots}
-  \framesubtitle{InstallParty !}
-  \begin{center}
-    \tikz
-      \node[fill=white, fill opacity=0.75, align=center] {Organisée par l'association \textsc{GoéLUG}\\au Container (en bas de la CCI), ce soir à 18h30.};
-  \end{center}
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=false,rounded=true]{title}
+    \usebeamerfont{title}Discussion / Manipulation\par%
+  \end{beamercolorbox}
+  \vfill
+  \tikz \node[fill=white, fill opacity=0.75, inner sep=2mm, rounded corners=3pt] {Merci de votre attention.};
 \end{frame}
 
-\setbeamertemplate{background canvas}[default]
+\bgimageoff
 
-\begin{frame}{Pour aller plus loin\dots}
-  \framesubtitle{Discussion / Manipulation}
-\end{frame}
-
-\begin{frame}{Sources}\small
-  \begin{itemize}
+\begin{frame}
+  Sources :
+  \begin{itemize}\small
     \item \emph{La philosophie du logiciel libre}, par Jean-François \textsc{Becquet} ;
     \item \emph{Qu'est ce que le logiciel libre et pourquoi faire ?}, par Dave Null ;
     \item \textsc{Wikipedia} ;
     \item \emph{Free Culture}, Lawrence Lessig ;
   \end{itemize}
+  
+  Sources :
+  \begin{center}\footnotesize
+    \href{https://github.com/gsavin/talks/tree/master/logiciel-libre}{\texttt{https://github.com/gsavin/talks/}}
+  \end{center}
+  
+  \tikz[overlay, remember picture]\node[anchor=south west] at ($(current page.south west)+(1mm, -0.6mm)$) {\pgfuseimage{licence}};
 \end{frame}
